@@ -7,13 +7,9 @@
 </head>
 <body>
 <div class="container">
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="/">Home</a>
-        <a class="navbar-brand" href="/shop">Shop</a>
-        <a class="navbar-brand" href="/basket">Basket</a>
-    </nav>
+    <nav th:replace="fragments/navbar :: navbar-standard">Her kommer navigationslinien</nav>
 
-    <tr th:each="product : ${basket}">
+    <tr th:each="product : ${session.basket.getProductList()}">
         <td th:text="product.getName()"></td>
         <td th:text="product.getPrice()"></td>
     </tr>
