@@ -12,10 +12,10 @@ public class ProductRepository {
     public List<Product> getAllProducts(){
         return new ArrayList<Product>(
                 Arrays.asList(
-                        new Product(1,"Chocolate", 30),
-                        new Product(2,"Oatmeal", 15),
-                        new Product(3,"Tofu", 20),
-                        new Product(4,"Macaroon", 50)
+                        new Product(1,"Chocolate Cookie", 30),
+                        new Product(2,"Oatmeal Cookie", 15),
+                        new Product(3,"Tofu Cookie", 20),
+                        new Product(4,"Macaroon Cookie", 50)
                 )
         );
     }
@@ -24,16 +24,16 @@ public class ProductRepository {
         Product productToReturn = null;
         switch(id){
             case 1 :
-                productToReturn = new Product(1,"Chocolate", 30);
+                productToReturn = new Product(1,"Chocolate Cookie", 30);
                 break;
             case 2 :
-                productToReturn = new Product(2,"Oatmeal", 15);
+                productToReturn = new Product(2,"Oatmeal Cookie", 15);
                 break;
             case 3 :
-                productToReturn = new Product(3,"Tofu", 20);
+                productToReturn = new Product(3,"Tofu Cookie", 20);
                 break;
             case 4 :
-                productToReturn = new Product(4,"Macaroon", 50);
+                productToReturn = new Product(4,"Macaroon Cookie", 50);
                 break;
         }
         return productToReturn;

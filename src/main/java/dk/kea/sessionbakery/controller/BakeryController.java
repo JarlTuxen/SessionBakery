@@ -20,7 +20,7 @@ public class BakeryController {
 
         @GetMapping("/basket")
         public String basket(HttpSession session, Model model){
-            //Hent products fra basket
+            //Hent products fra basket i session
             //tæl prisen på produkterne sammen
             //tilføj prisen til model og opdater basket.html så prisen vises
             return "basket";
@@ -34,7 +34,7 @@ public class BakeryController {
 
         @GetMapping("/addToBasket")
         public String add(@RequestParam String id, HttpSession httpSession){
-            //create og add product til basket - gem i Session
+            //hent basket fra session - create og add product til basket - gem i Session
             return "redirect:/basket";
         }
 

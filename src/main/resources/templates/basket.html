@@ -9,10 +9,12 @@
 <div class="container">
     <nav th:replace="fragments/navbar :: navbar-standard">Her kommer navigationslinien</nav>
 
-    <tr th:each="product : ${session.basket.getProductList()}">
-        <td th:text="product.getName()"></td>
-        <td th:text="product.getPrice()"></td>
-    </tr>
+    <table>
+        <tr th:each="product : ${session.basket.getProductList()}">
+            <td th:text="product.getName()"></td>
+            <td th:text="product.getPrice()"></td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>
